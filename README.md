@@ -74,6 +74,11 @@ For the text processing chapter, you need to download the English language model
 
     python -m spacy download en
 
+As of Spacy v3.0, the syntax is 
+
+    python -m spacy download en_core_web_sm
+    
+
 ## Submitting Errata
 
 If you have errata for the (e-)book, please submit them via the [O'Reilly Website](http://www.oreilly.com/catalog/errata.csp?isbn=0636920030515).
