@@ -27,6 +27,9 @@ the command ``pip install mglearn`` in your terminal or ``!pip install mglearn``
 
 
 ## Errata
+
+### Missing import
+
 Please note that the first print of the book is missing the following line when listing the assumed imports:
 
 ```python
@@ -34,6 +37,19 @@ from IPython.display import display
 ```
 Please add this line if you see an error involving ``display``.
 
+### Spacy download language name changed
+As of Spacy v3.0, the syntax is 
+
+```python
+python -m spacy download en_core_web_sm
+```
+
+### IPython.display.set_matplotlib_formats deprecated
+See https://github.com/fangohr/introduction-to-python-for-computational-science-and-engineering/issues/32
+
+[preamble.py](preamble.py) was adjusted to reflect the changes
+
+### Changes in sckit-learn from the first print
 
 The first print of the book used a function called ``plot_group_kfold``.
 This has been renamed to ``plot_label_kfold`` because of a rename in

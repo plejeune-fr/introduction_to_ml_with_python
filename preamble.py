@@ -1,11 +1,22 @@
-from IPython.display import set_matplotlib_formats, display
+# Next is original line.
+# see https://github.com/fangohr/introduction-to-python-for-computational-science-and-engineering/issues/32
+#from IPython.display import set_matplotlib_formats, display
+from IPython.display import display
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import mglearn
 from cycler import cycler
 
-set_matplotlib_formats('pdf', 'png')
+# New block per above url on set_matplotlib_formats problem
+# settings for jupyter book: svg for html version, high-resolution png for pdf
+import matplotlib_inline.backend_inline
+# matplotlib_inline.backend_inline.set_matplotlib_formats('svg', 'png')
+# import matplotlib as mpl
+# mpl.rcParams['figure.dpi'] = 400
+
+matplotlib_inline.backend_inline.set_matplotlib_formats('pdf', 'png')
+#set_matplotlib_formats('pdf', 'png')
 plt.rcParams['savefig.dpi'] = 300
 plt.rcParams['image.cmap'] = "viridis"
 plt.rcParams['image.interpolation'] = "none"
